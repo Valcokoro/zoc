@@ -1,8 +1,10 @@
+import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 
 function Lenders(){
     return (
             <div className="min-h-screen text-gray-900 mt-10 ">
+                <Navbar />
                 <section className="text-center py-16 px-6 bg-blue-950 text-white">
                     <h1 className="text-2xl md:text-5xl font-bold leading-tight">Put Your Money to Work – Lend & Earn with Zoc</h1>
                     <p className="mt-4 text-2xl md:text-2xl leading-relaxed">Earn competitive returns by lending to verified borrowers worldwide. 
