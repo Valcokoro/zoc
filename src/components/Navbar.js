@@ -3,6 +3,11 @@ import { SiAnalogue } from "react-icons/si";
 import Link from './Link';
 import Button from "./Button";
 import { FaChevronDown } from 'react-icons/fa';
+import Blog from '../Assets/blog.svg';
+import People from '../Assets/people.svg';
+import Faqs from '../Assets/faqs.svg';
+import Careers from '../Assets/careers.svg';
+import Support from '../Assets/support.svg';
 
 
 function Navbar(){
@@ -40,22 +45,37 @@ function Navbar(){
                     <FaChevronDown className="text-sm" />
                 </div>
                 {showDropdown && (
-                <div className="absolute font-sans top-full mt-2 w-40 bg-white border border-gray-200 shadow-md rounded-lg z-50">
+                <div className="absolute flex font-sans top-full mt-2 w-80 h-60 bg-white border border-gray-200 shadow-md rounded-lg z-50">
                 <ul className="flex flex-col">
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link to="/blog">Blog</Link>
+                        <span className="flex items-center gap-2">
+                            <img src={Blog} alt="Blog Icon" height="25" width="25" />
+                            <Link to="/blog">Blog</Link>
+                        </span> 
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link to="/faq">About us</Link>
+                        <span className="flex items-center gap-2">
+                            <img src={People} alt="People Icon" height="25" width="25" />
+                            <Link to="/about">About us</Link>
+                        </span>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link to="/faq">FAQ</Link>
+                        <span className="flex items-center gap-2">
+                            <img src={Faqs} alt="Faq Icon" height="17" width="17" />
+                            <Link to="/faqs">FAQ</Link>
+                        </span>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link to="/support">Careers</Link>
+                        <span className="flex items-center gap-2">
+                            <img src={Careers} alt="Careers Icon" height="17" width="17" />
+                            <Link to="/careers">Careers</Link>
+                        </span>
                     </li>
                     <li className="px-4 py-2 hover:bg-gray-100">
-                    <Link to="/support">Support</Link>
+                        <span className="flex items-center gap-2">
+                            <img src={Support} alt="Support Icon" height="17" width="17" />
+                            <Link to="/support">Support</Link>
+                        </span>
                     </li>
                 </ul>
                 </div>
