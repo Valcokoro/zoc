@@ -1,5 +1,5 @@
 import Route from './components/Route';
-import Home from './pages/home';
+import Home from './pages/Home';
 import Lenders from './pages/Lenders';
 
 function App(){
