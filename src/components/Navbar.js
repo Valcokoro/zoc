@@ -8,11 +8,20 @@ import People from '../Assets/people.svg';
 import Faqs from '../Assets/faqs.svg';
 import Careers from '../Assets/careers.svg';
 import Support from '../Assets/support.svg';
+import Hamburger from '../Assets/hamburger.svg';
+import Times from '../Assets/times.svg';
 
 
 function Navbar() {
     const [showDropdown, setShowDropdown] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const hamburgerMenu = Hamburger;
+    const times = Times;
+    const [menu, setMenu] = useState(true);
+    const showMenu = menu ? hamburgerMenu : times;
+
+    
 
     return (
 
@@ -26,10 +35,9 @@ function Navbar() {
             </div>
             {/* Mobile Menu Toggle Button */}
             <div className="md:hidden">
-                <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                <svg className="w-6 h-6 text-blue-950" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                <button onClick={() => {setIsMobileMenuOpen(!isMobileMenuOpen); 
+                                        setMenu(!menu)} }>
+                    <img src={showMenu}  height="20" width="20"/>
                 </button>
             </div>
     
