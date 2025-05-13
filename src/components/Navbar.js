@@ -74,6 +74,20 @@ function Navbar() {
             {isMobileMenuOpen && (
                 <div className="absolute top-20 left-0 w-full bg-white shadow-lg z-50 px-6 py-6 md:hidden">
                     <nav className="flex flex-col">
+                        <div className="mt-6 flex flex-col gap-3">
+                                <Button
+                                step="Sign in"
+                                text="text-blue-950"
+                                border="border-2 border-blue-950 rounded-lg"
+                                hover="hover:bg-blue-950 hover:text-white"
+                                />
+                                <Button
+                                step="Get Started"
+                                text="text-white"
+                                border="border-2 border-white rounded-lg"
+                                background="bg-yellow-600"
+                                />
+                            </div>
                         <Link to="/lend" className="block text-blue-950 font-medium">Lend</Link>
                         <Link to="/borrow" className="block text-blue-950 font-medium">Borrow</Link>
                         <Link to="/repay" className="block text-blue-950 font-medium">Repay</Link>
@@ -87,21 +101,6 @@ function Navbar() {
                         <NavItem icon={Support} label="Support" link="/support" />
                         </div>
                         </details>
-
-                        <div className="mt-6 flex flex-col gap-3">
-                            <Button
-                            step="Sign in"
-                            text="text-blue-950"
-                            border="border-2 border-blue-950 rounded-lg"
-                            hover="hover:bg-blue-950 hover:text-white"
-                            />
-                            <Button
-                            step="Get Started"
-                            text="text-white"
-                            border="border-2 border-white rounded-lg"
-                            background="bg-yellow-600"
-                            />
-                        </div>
 
                     </nav>
                 
